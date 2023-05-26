@@ -18,13 +18,16 @@ accordions.forEach(accordion => {
     if(window.innerWidth >= 788){
         accordion.addEventListener('mouseover', ()=>{
             accordion.lastElementChild.classList.add('showbox');
+            accordion.firstElementChild.classList.add('arrow');
         })
         accordion.addEventListener('mouseout', ()=>{
             accordion.lastElementChild.classList.remove('showbox');
+            accordion.firstElementChild.classList.remove('arrow');
         })
     } else {
         accordion.addEventListener('click', ()=>{
             accordion.lastElementChild.classList.toggle('showbox');
+            accordion.firstElementChild.classList.toggle('arrow');
         })
     }
 
